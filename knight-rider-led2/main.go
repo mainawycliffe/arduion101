@@ -6,7 +6,7 @@ import (
 )
 
 const (
-	max_led_num   = 5
+	max_led_num   = 6
 	start_led_pin = 2
 )
 
@@ -36,8 +36,9 @@ func main() {
 		// invert index's moving direction at each end
 		if index == 0 || index == len(leds)-1 {
 			delta *= -1
+			delay(200)
 		}
 
-		delay(100)
+		delay(120)
 	}
 }
